@@ -13,8 +13,7 @@ using namespace std;
 /*
     TODO:
     Add "end" chapter (or some use to end)
-    Fix "unknown type name 'chapter'" error
-    Fix "no matching constructor for initialization of 'newStory'" error
+    Fix linker error
 */
 
 // general use functions
