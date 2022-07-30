@@ -127,3 +127,5 @@ int main() {
 	coinFlip.printOptions();
 }
 ```
+
+>Note: only use `<nif.h>` if you have added nif.h, nif-err.h and their source files to `/usr/local/include`. If you have *not*, make sure you replace `#include <nif.h>` with `#include "nif.h"`.
