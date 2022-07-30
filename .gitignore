@@ -1,4 +1,9 @@
+# debug files
+
 *.dYSM
 *.swp
 
+# testing source file
 
+test.cpp
+main.cpp
