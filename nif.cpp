@@ -81,8 +81,10 @@ void chapter::operator>>(chapter c) { // add chapters as potential options
 }
 
 void chapter::operator<<(chapter c) { // points new chapter to old chapter
-    *this = c;
-    this->printChap(); // prints out new chapter's contents
+    this->expo = c.expo; // set exposition
+    this->logline = c.logline; // set logline
+    for(int i = 0; i < c.nextOption_ptr; i++) // set next options
+        this->nextOption[i] = c.nextOption[i];
 } 
 
 void chapter::printChap() {

@@ -29,7 +29,7 @@ void endStory(int); // end the game
 class chapter {
     public:
         string logline;             // the description of the option
-        void printChap();           // prints out logline and (eventually) other stuff
+        void printChap();           // prints out logline and (eventually) other stuff: deprecated for newStory's printOptions()
         string expo;           // exposition for current chapter
         chapter();                  // default constructor
         int nextOptionID;           // the ID of the next chapter
