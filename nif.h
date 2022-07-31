@@ -16,6 +16,9 @@ using namespace std;
     Fix linker error
 */
 
+extern int IDList[1000];           // list of IDs
+extern int IDList_ptr;             // current unused spot in IDList
+
 // general use functions
 void storyInit(); // initialize the story
 void clear(); // clear the screen
@@ -48,8 +51,6 @@ class newStory {
         chapter nextOption[1000];   // map of all options
         chapter current;            // current chapter, will be left-shifted by next option
         string title;               // TODO: add title of the story to potential header
-        int IDList[1000];           // list of IDs
-        int IDList_ptr;             // current unused spot in IDList
 };
 
 #endif // NIF_H

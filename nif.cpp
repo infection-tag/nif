@@ -6,6 +6,9 @@
 
 using namespace std;
 
+int IDList[1000];
+int IDList_ptr = 0;
+
 void clear() { // clear the screen
     system("clear");
 }
@@ -51,12 +54,16 @@ chapter::chapter(int ID, string l) {
     
     // checks if ID is availible
     int i;
-    for(i = 0; IDList[i] != ID; i++) {
+    for(i = 0;; i++) {
+        if(IDList[i] == ID) {
+            __NIFERR_CONFLICTING_ID;
+        }
         chapterID = ID;
         IDList_ptr++;
         return;
     }
-    try {
+    // commenting the following lines out for debugging
+/*    try {
         // chapter ID has conflict with another chapter
         if(IDList[i] == ID) {
             throw ID;
@@ -65,7 +72,7 @@ chapter::chapter(int ID, string l) {
     catch(int ID) {
         __NIFERR_CONFLICTING_ID;
         exit(2);
-    }
+    } */
 }
 
 void chapter::operator>>(chapter c) { // add chapters as potential options
