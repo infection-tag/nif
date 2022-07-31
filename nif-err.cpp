@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void NIFerr(int i) {
+void NIFerror(int i) {
     switch(i) {
         case -1: // no chapters have been provided to the story
             cout << "INIT ERROR: NO CHAPTERS PROVIDED TO STORY\n" << "Chapter is missing or restricted.\n";
